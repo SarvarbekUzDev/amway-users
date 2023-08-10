@@ -1,0 +1,41 @@
+---------------------- USERS --------------------
+
+-- CREATE USER -- [POST]
+name, mail, password
+/api/v1/users/register
+
+-- DETAIL USER -- [GET]
+/api/v1/users/user/detail/<user_id>
+
+-- UPDATE USER -- [PUT]
+name, mail, password
+/api/v1/users/user/update/<user_id>
+
+
+---------------------- PRODUCTS ------------
+
+-- CREATE PRODUCT -- [POST]
+name, description=>shart emas, price, daily_amount=>shart emas, number, user 
+worker={'worker_id':'<worker_id>','name':'Name','mail':'@mail'}
+/api/v1/products/create
+
+-- DETAIL PRODUCT -- [GET]
+/api/v1/products/product/detail/<product_id>
+
+-- UPDATE PRODUCT -- [PUT]
+name, description, price, daily_amount, number, user 
+worker={'worker_id':'<worker_id>','name':'Name','mail':'@mail'}
+/api/v1/products/product/update/3
+
+
+-- DELETE PRODUCT -- [DELETE]
+/api/v1/products/product/delete/<product_id>
+
+
+-- USER PRODUCTS -- [GET]
+/api/v1/products/user-products/<user_id>
+
+
+# ------------------- ACTIONS -----------------------
+-- USER ni Ayanan bir WORKERdan sotib olgan mahsulotlari
+/api/v1/actions/user-products/<user_id>/<worker_id>
